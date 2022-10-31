@@ -19,3 +19,9 @@
 1251 Turned _LoginPartial links into buttons using bootstrap
 1254 Tested app, bootswatch theme applied as expected
 
+1323 Updated _Layout to add various 3rd party tools and scripts
+1330 Added Content management dropdown in navbar on _Layout page
+1334 Created DataAccess library and moved data folder into new project directory
+1339 Added EF Core Relational and EF Core SqlServer NuGet Packages
+1340 Deleted migrations folder
+1347 Built project, got errors, dont have time to fix
