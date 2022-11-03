@@ -50,3 +50,5 @@
 1735 ***ERROR 404: Getting 404 error when testing app
 1740 Issue solved, forgot to specify default area in Startup.cs
 1742 Coppied _ViewImports and _ViewStart to customer area, tested app, bootstrap is working again
+1748 Added links to dropdown in nav, just noticed privacy link isn't working
+1817 Solved, forgot to comment out old endpoint route in startup.cs

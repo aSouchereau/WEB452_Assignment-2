@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AlexBookstore.Areas.Customer.Controllers
+namespace AlexBookstore.Areas.Customers.Controllers
 {
     [Area("Customer")]
     public class HomeController : Controller
@@ -27,6 +27,7 @@ namespace AlexBookstore.Areas.Customer.Controllers
 
         public IActionResult Privacy()
         {
+            Debug.WriteLine("Made it to controller");
             return View();
         }
 
