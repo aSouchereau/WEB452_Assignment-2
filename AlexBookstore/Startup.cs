@@ -1,9 +1,10 @@
-using AlexsBooks.DataAccess.Data;
+using AlexBookstore.DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,7 @@ namespace AlexBookstore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+/*            MvcOptions.EnableEndpointRouting = false;     added to enable the use of UseMvc method */
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -58,11 +60,22 @@ namespace AlexBookstore
             app.UseAuthentication();
             app.UseAuthorization();
 
+
+        
+
             app.UseEndpoints(endpoints =>
             {
+                // Original Default Route
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                  name: "default",
+                  pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
+
+                // Modified from original scaffoldingreadme, may cause problems (not using "UseMvc())
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}"
+                );                
                 endpoints.MapRazorPages();
             });
         }
