@@ -52,3 +52,4 @@
 1742 Coppied _ViewImports and _ViewStart to customer area, tested app, bootstrap is working again
 1748 Added links to dropdown in nav, just noticed privacy link isn't working
 1817 Solved, forgot to comment out old endpoint route in startup.cs
+1820 Commiting code and pushing to github

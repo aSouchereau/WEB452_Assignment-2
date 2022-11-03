@@ -66,11 +66,11 @@ namespace AlexBookstore
             app.UseEndpoints(endpoints =>
             {
                 // Original Default Route
-                endpoints.MapControllerRoute(
+  /*              endpoints.MapControllerRoute(
                   name: "default",
                   pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
-
+*/
                 // Modified from original scaffoldingreadme, may cause problems (not using "UseMvc())
                 endpoints.MapControllerRoute(
                   name: "areas",
