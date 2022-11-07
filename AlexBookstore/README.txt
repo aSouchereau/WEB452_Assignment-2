@@ -58,4 +58,14 @@
 1157 Got to class pulled repo beginning work on part 2 of assignment
 1215 Tested app, working, no errors
 1220 Ran "Add-Migration IdentityInitialCreate" got: target project (AlexBookstore) doesn't match your migrations assembly (AlexsBooks.DataAccess)
-1221 Ran command again after chaning project in dropdown menu, migration created ()
+1221 Ran command again after chaning project in dropdown menu, migration created		 **********(20221107172245_IdentityInitialCreate.cs)
+1225 Modified name of database in appsettings.json
+1228 Created AlexsBookStoreDB by running Update-Database
+1231 Tested app, working, no errors
+1237 Added Category to ApplicationDbContext
+1238 Updated namespace of Category model
+1243 Updated visibility of Category class so it can be accessed by ApplicationDbContext
+1244 Created migration AddCategoryToDb			 *********(20221107174427_AddCategoryToDb.cs)
+1245 Updated the database, Categories table added
+1247 Tested app, working, no errors
+1248 Commiting code and pushing to github
