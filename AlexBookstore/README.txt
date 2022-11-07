@@ -53,3 +53,9 @@
 1748 Added links to dropdown in nav, just noticed privacy link isn't working
 1817 Solved, forgot to comment out old endpoint route in startup.cs
 1820 Commiting code and pushing to github
+
+2022-11-07
+1157 Got to class pulled repo beginning work on part 2 of assignment
+1215 Tested app, working, no errors
+1220 Ran "Add-Migration IdentityInitialCreate" got: target project (AlexBookstore) doesn't match your migrations assembly (AlexsBooks.DataAccess)
+1221 Ran command again after chaning project in dropdown menu, migration created ()
