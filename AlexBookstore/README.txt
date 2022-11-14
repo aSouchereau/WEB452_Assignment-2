@@ -54,6 +54,11 @@
 1817 Solved, forgot to comment out old endpoint route in startup.cs
 1820 Commiting code and pushing to github
 
+
+
+============
+   Part 2
+============
 2022-11-07
 1157 Got to class pulled repo beginning work on part 2 of assignment
 1215 Tested app, working, no errors
@@ -69,3 +74,10 @@
 1245 Updated the database, Categories table added
 1247 Tested app, working, no errors
 1248 Commiting code and pushing to github
+
+
+
+2022-11-13
+2030 Pulled repo and continuing work on part two of assignment
+2033 Tested app, working no errors
+2049 Created repository class and interface
