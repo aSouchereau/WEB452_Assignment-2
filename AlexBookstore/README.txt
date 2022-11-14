@@ -96,3 +96,4 @@
 2319 Tested app, working, no errors
 2325 Added category link to dropdown menu
 2326 Committed code and pushed to github
+2336 Added icons and javascript to category index
