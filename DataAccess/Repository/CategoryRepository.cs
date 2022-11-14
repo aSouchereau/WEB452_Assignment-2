@@ -22,7 +22,6 @@ namespace AlexsBooks.DataAccess.Repository
             if (objFromDb != null)  // If not null, then save changes
             {
                 objFromDb.Name = category.Name;
-                _db.SaveChanges();
             }
         }
     }

@@ -97,3 +97,11 @@
 2325 Added category link to dropdown menu
 2326 Committed code and pushed to github
 2336 Added icons and javascript to category index
+
+2022-11-14
+1050 Added Upsert action in CategoryController
+1102 Created Upsert view and partials
+1105 Tested app, working
+1106 Added section call with validation scripts partial
+1121 Added api calls for save and delete
+1122 Next is implement httpdelete with a delete method in category.js

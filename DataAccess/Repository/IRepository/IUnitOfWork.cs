@@ -8,5 +8,7 @@ namespace AlexsBooks.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get; }
         ISP_Call SP_Call { get; }
+
+        public void Save();
     }
 }
