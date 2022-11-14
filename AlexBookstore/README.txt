@@ -81,3 +81,7 @@
 2030 Pulled repo and continuing work on part two of assignment
 2033 Tested app, working no errors
 2049 Created repository class and interface
+2050 Committed code
+2104 Created CategoryRepository and interface
+2105 Built solution, no errors
+2106 Committed code

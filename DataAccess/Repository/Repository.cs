@@ -9,7 +9,7 @@ using System.Text;
 
 namespace AlexsBooks.DataAccess.Repository
 {
-    class Repository<T> : IRepository<T>, IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         // modify the database w/ the db context
         private readonly ApplicationDbContext _db;      // get the db instance using the constructor and DI 
