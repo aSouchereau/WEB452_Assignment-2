@@ -89,3 +89,10 @@
 2228 Created UnitOfWork class and interface
 2253 Built and tested app, working
 2254 Committed code
+2301 Added CategoryController to Admin Area
+2308 Getting Error: ICategoryRepository does not contain a definition for GetAll, must be a problem with implementation
+2312 Solved, forgot to implement IRepository in ICategoryRepository
+2317 Created index view in Admin area
+2319 Tested app, working, no errors
+2325 Added category link to dropdown menu
+2326 Committed code and pushed to github

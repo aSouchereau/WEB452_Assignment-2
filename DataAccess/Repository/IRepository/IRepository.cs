@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace AlexsBooks.DataAccess.Repository.IRepository
 {
-    interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         void Add(T entity);
         T Get(int id);

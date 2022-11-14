@@ -27,7 +27,6 @@ namespace AlexBookstore.Areas.Customers.Controllers
 
         public IActionResult Privacy()
         {
-            Debug.WriteLine("Made it to controller");
             return View();
         }
 
