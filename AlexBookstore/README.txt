@@ -106,6 +106,12 @@
 1121 Added api calls for save and delete
 1122 Next is implement httpdelete with a delete method in category.js
 
+1205 Got to class, pulled repo, and updated database
+1225 Added delete method and delete button functionality in category.js
+1228 Getting invalid regex error "Flag c"
+1234 Issue solved, caused by quotation marks in wrong position on the delete button
+1236 Tested app, able to create and delete categories, cannot edit
+
 ============
    Part 3
 ============
