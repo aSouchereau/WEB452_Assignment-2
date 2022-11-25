@@ -1,4 +1,4 @@
-﻿using AlexBookstore.Models;
+﻿using AlexsBooks.Models;
 
 namespace AlexsBooks.DataAccess.Repository.IRepository
 {

@@ -1,5 +1,5 @@
 ﻿using AlexBookstore.DataAccess.Data;
-using AlexBookstore.Models;
+using AlexsBooks.Models;
 using AlexsBooks.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
