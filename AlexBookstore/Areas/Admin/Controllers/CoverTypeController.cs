@@ -28,7 +28,7 @@ namespace AlexBookstore.Areas.Admin.Controllers
             CoverType coverType = new CoverType();
             if (id == null) // if id is null then
             {
-                return View(); // create
+                return View(coverType); // create
             }
 
             coverType = _unitOfWork.CoverType.Get(id.GetValueOrDefault());

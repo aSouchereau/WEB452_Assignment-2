@@ -28,7 +28,7 @@ namespace AlexBookstore.Areas.Admin.Controllers
             Category category = new Category();
             if (id == null) // if id is null then
             {
-                return View(); // create
+                return View(category); // create
             }
 
             category = _unitOfWork.Category.Get(id.GetValueOrDefault());
