@@ -8,7 +8,7 @@ using System.Text;
 
 namespace AlexsBooks.DataAccess.Repository
 {
-    public class ProductRepository : Repository<CoverType>, IProductRepository, IProductRepository
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
         private readonly ApplicationDbContext _db;
         public ProductRepository(ApplicationDbContext db) : base(db)
