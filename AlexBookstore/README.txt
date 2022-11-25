@@ -118,3 +118,4 @@
 1930 Generated interface from CoverTypeRepository
 1944 Trying to add CoverType to UnitOfWork class and interface, getting CS0266 error, Cannot implicitly convert type CoverTypeRepo to ICovertypeRepo, also applying to category
 1953 Problem solved, forgot to finish updating namespaces. Each class couldnt use its interface as they were in a different namespace
+2004 Created migration for the new CoverType table, and updated the database
