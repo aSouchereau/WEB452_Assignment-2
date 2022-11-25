@@ -135,3 +135,9 @@
 0110 Added additional validation to the product class
 0111 Created migration for updated product class
 0112 Updated the database
+0115 Created product repository and added update method
+0116 Created product repository interface
+0120 Added product to UnitOfWork and its interface
+0122 Tested app, error, forgot to specify type of repository in the ProductRepository class implementations
+0125 Tested app again, no errors this time
+0126 Pushing code to github
