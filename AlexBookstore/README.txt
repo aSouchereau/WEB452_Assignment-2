@@ -125,3 +125,13 @@
 1944 Trying to add CoverType to UnitOfWork class and interface, getting CS0266 error, Cannot implicitly convert type CoverTypeRepo to ICovertypeRepo, also applying to category
 1953 Problem solved, forgot to finish updating namespaces. Each class couldnt use its interface as they were in a different namespace
 2004 Created migration for the new CoverType table, and updated the database
+
+2022-11-25
+0030 Fixed merge conflict involving the readme, category controller, and category.js script
+0041 Created Product class
+0050 Added Product to Application DbContext
+0105 Created migration for product table ***************20221125060355_AddProductsToDb.cs
+0106 Updated the database
+0110 Added additional validation to the product class
+0111 Created migration for updated product class
+0112 Updated the database
