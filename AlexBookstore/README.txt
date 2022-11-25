@@ -141,3 +141,13 @@
 0122 Tested app, error, forgot to specify type of repository in the ProductRepository class implementations
 0125 Tested app again, no errors this time
 0126 Pushing code to github
+
+1004 Created product controller
+1006 Created Product View Model
+1008 Installed package: Microsoft.AspNetCore.Mvc.ViewFeatures
+1020 Added upsert methods to Product Controller
+1025 Created product index view
+1028 Created product.js and referenced in in product index
+1030 Added product link to nav bar dropdown
+1034 Tested app, working as expected. Exception when loading product list page, caused by Upsert view not found, which we haven't created yet.
+1035 Committing code and pushing to github
