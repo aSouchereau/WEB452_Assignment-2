@@ -1,7 +1,6 @@
 ﻿using AlexBookstore.Models;
-using AlexsBooks.DataAccess.Repository.IRepository;
 
-namespace AlexsBooks.DataAccess.Repository
+namespace AlexsBooks.DataAccess.Repository.IRepository
 {
     public interface ICategoryRepository : IRepository<Category>
     {

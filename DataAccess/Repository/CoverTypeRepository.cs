@@ -8,21 +8,21 @@ using System.Text;
 
 namespace AlexsBooks.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class CoverTypeRepository : Repository<CoverType>, ICoverTypeRepository
     {
         private readonly ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db) : base(db)
+        public CoverTypeRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        public void Update(Category category)
+        public void Update(CoverType coverType)
         {
             // use linq to get first or default cat obj, pass id as generic entity which matches category ID
-            var objFromDb = _db.Categories.FirstOrDefault(s => s.ID == category.ID);
+            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.ID == coverType.ID);
             if (objFromDb != null)  // If not null, then save changes
             {
-                objFromDb.Name = category.Name;
+                objFromDb.Name = coverType.Name;
             }
         }
     }
