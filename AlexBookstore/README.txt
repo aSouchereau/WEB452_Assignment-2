@@ -105,3 +105,16 @@
 1106 Added section call with validation scripts partial
 1121 Added api calls for save and delete
 1122 Next is implement httpdelete with a delete method in category.js
+
+============
+   Part 3
+============
+*** Section 1 ***
+2022-11-24
+1700 Pulled repo, beginning work on part 3 section 1
+1705 Created covertype class
+1711 Updated namespaces of CoverType and Category class from Repository to Repository.IRepository
+1925 Created CoverTypeRepository, added same update method from category repository
+1930 Generated interface from CoverTypeRepository
+1944 Trying to add CoverType to UnitOfWork class and interface, getting CS0266 error, Cannot implicitly convert type CoverTypeRepo to ICovertypeRepo, also applying to category
+1953 Problem solved, forgot to finish updating namespaces. Each class couldnt use its interface as they were in a different namespace
