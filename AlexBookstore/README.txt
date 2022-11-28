@@ -142,6 +142,7 @@
 0125 Tested app again, no errors this time
 0126 Pushing code to github
 
+*** Section 2 ***
 1004 Created product controller
 1006 Created Product View Model
 1008 Installed package: Microsoft.AspNetCore.Mvc.ViewFeatures
@@ -151,3 +152,11 @@
 1030 Added product link to nav bar dropdown
 1034 Tested app, working as expected. Exception when loading product list page, caused by Upsert view not found, which we haven't created yet.
 1035 Committing code and pushing to github
+
+*** Section 3 ***
+1300 Pulled repo, beginning work on part 3 section 3
+1308 Created Product upsert view, added tiny cloud api key and script
+1312 Uncommented Upsert post method and removed save method call from conditional statement that adds a product
+1316 Tested app, product upsert page loads, text box works, still getting "Navigation not found exception"
+1319 Going to use provided completed assignmennt example to find whats causing the exception
+

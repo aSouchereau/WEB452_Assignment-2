@@ -58,16 +58,15 @@ namespace AlexBookstore.Areas.Admin.Controllers
         }
 
         // use HTTP POST to define post-action method
-        /*[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Product product)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)     // checks all validations in the model
             {
                 if (product.ID == 0)
                 {
                     _unitOfWork.Product.Add(product);
-                    _unitOfWork.Save();
                 }
                 else
                 {
@@ -77,7 +76,7 @@ namespace AlexBookstore.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
-        }*/
+        }
 
         // API calls here
         [HttpGet]
