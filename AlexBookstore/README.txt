@@ -160,3 +160,13 @@
 1316 Tested app, product upsert page loads, text box works, still getting "Navigation not found exception"
 1319 Going to use provided completed assignmennt example to find whats causing the exception
 
+============
+   Part 4
+============
+1330 Added validation to covertype model
+1331 Added migration for covertype validation and updated the database
+1333 Found potential solution to problem, in Product.cs the foreign key reference for CoverType was set to Category, meaning [ForeignKey("CategoryID")] was written twice
+1336 Added migration to fix foreign key error
+1340 Updated database, got ALTER TABLE statement conflicted with the FOREIGN KEY constraint
+1344 Solved by deleting test data from created tables
+1345 Tested app, foreign key update didn't fix exception
