@@ -173,3 +173,7 @@
 
 1548 Updated product controller Upsert post method to match example
 1550 Tested app, still getting same exception, also, product upsert view displays list of categories instead of covertype
+1559 Fixed dropdown issue, changed model references from category to covertype in the dropdown
+
+1758 Solved error causing exception, GetAll method in product controller had a space in the include parameters and was reading it as " CoverType" instead of "CoverType"
+1800 Tested app, getting ajax errors. Requesting unknown parameters
