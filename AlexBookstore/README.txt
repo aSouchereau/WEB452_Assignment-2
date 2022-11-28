@@ -170,3 +170,6 @@
 1340 Updated database, got ALTER TABLE statement conflicted with the FOREIGN KEY constraint
 1344 Solved by deleting test data from created tables
 1345 Tested app, foreign key update didn't fix exception
+
+1548 Updated product controller Upsert post method to match example
+1550 Tested app, still getting same exception, also, product upsert view displays list of categories instead of covertype

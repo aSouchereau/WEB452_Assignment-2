@@ -19,6 +19,7 @@ namespace AlexsBooks.Models
         public string Author { get; set; }
         [Required]
         [Range(1,1000)]
+        [Display(Name = "List Price")]
         public double ListPrice { get; set; }
         public string ImageUrl { get; set; }
 
