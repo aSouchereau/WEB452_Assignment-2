@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -43,7 +44,7 @@ namespace AlexBookstore.Areas.Admin.Controllers
                 {
                     Text = i.Name,
                     Value = i.ID.ToString()
-                }),
+                })
             };
             if (id == null)
             {
@@ -58,24 +59,94 @@ namespace AlexBookstore.Areas.Admin.Controllers
         }
 
         // use HTTP POST to define post-action method
+        /*        [HttpPost]
+                [ValidateAntiForgeryToken]
+                public IActionResult Upsert(Product product)
+                {
+                    if (ModelState.IsValid)     // checks all validations in the model
+                    {
+                        if (product.ID == 0)
+                        {
+                            _unitOfWork.Product.Add(product);
+                        }
+                        else
+                        {
+                            _unitOfWork.Product.Update(product);
+                        }
+                        _unitOfWork.Save();
+                        return RedirectToAction(nameof(Index));
+                    }
+                    return View(product);
+                }*/
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Product product)
+        public IActionResult Upsert(ProductVM productVM)
         {
             if (ModelState.IsValid)     // checks all validations in the model
             {
-                if (product.ID == 0)
+                string webRootPath = _hostEnvironment.WebRootPath;
+                var files = HttpContext.Request.Form.Files;
+                if(files.Count > 0)
                 {
-                    _unitOfWork.Product.Add(product);
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(webRootPath, @"images\products");
+                    var extension = Path.GetExtension(files[0].FileName);
+
+                    if (productVM.Product.ImageUrl != null)
+                    {
+                        // If condition met, request is an edit, and we need to remove the old image
+                        var imagePath = Path.Combine(webRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(imagePath))
+                        {
+                            System.IO.File.Delete(imagePath);
+                        }
+                    }
+                    using (var filesStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    {
+                        files[0].CopyTo(filesStreams);
+                    }
+                    productVM.Product.ImageUrl = @"\images\products\" + fileName + extension;
                 }
                 else
                 {
-                    _unitOfWork.Product.Update(product);
+                    // update when image is not changed
+                    if (productVM.Product.ID != 0)
+                    {
+                        Product objFromDb = _unitOfWork.Product.Get(productVM.Product.ID);
+                        productVM.Product.ImageUrl = objFromDb.ImageUrl;
+                    }
+                }
+
+                if (productVM.Product.ID == 0)
+                {
+                    _unitOfWork.Product.Add(productVM.Product);
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(productVM.Product);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(product);
+            else    // model state is invalid
+            {
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.ID.ToString()
+                });
+                productVM.CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.ID.ToString()
+                });
+                if (productVM.Product.ID != 0)
+                {
+                    productVM.Product = _unitOfWork.Product.Get(productVM.Product.ID);
+                }
+            }
+            return View(productVM);
         }
 
         // API calls here
