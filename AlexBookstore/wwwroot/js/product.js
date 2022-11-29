@@ -21,7 +21,7 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                           <div class="text-center">
-                                <a href="/Admin/Product/Upsert/id" class="btn btn-outline-success text-dark" style="cursor:pointer">
+                                <a href="/Admin/Product/Upsert/${data}" class="btn btn-outline-success text-dark" style="cursor:pointer">
                                     <i class="fas fa-edit"></i>&nbsp;
                                 </a>
                                 <a onclick=Delete("/Admin/Product/Delete/${data}") class="btn btn-outline-danger text-dark" style="cursor:pointer">

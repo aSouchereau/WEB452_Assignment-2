@@ -186,5 +186,7 @@
 	List of current issues as of 1920:
 		1.	Ajax not loading category column (category.Name unkown parameter)
 		2.	Clicking edit button doesn't append the id to the url, resulting in showing the create form in the upsert view
-		3.  
+		3.  New Product price properties not saving to the database
 1930 Deleted all test items from database tables
+1938 #3 solved by closing all tabs in SQL Server Object Explorer, allowing database to finish updating
+1945 Solved #2 by replacing '/Admin/Product/Upsert/id' with '/Admin/Product/Upsert/${data}' in each js script
