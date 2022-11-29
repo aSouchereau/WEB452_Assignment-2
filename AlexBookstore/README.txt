@@ -190,3 +190,5 @@
 1930 Deleted all test items from database tables
 1938 #3 solved by closing all tabs in SQL Server Object Explorer, allowing database to finish updating
 1945 Solved #2 by replacing '/Admin/Product/Upsert/id' with '/Admin/Product/Upsert/${data}' in each js script
+
+2055 Solved #3 by fixing typo in product.js. In the ajax call the category column had category.Name when it should have been category.name
