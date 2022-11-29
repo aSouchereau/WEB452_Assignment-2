@@ -192,3 +192,5 @@
 1945 Solved #2 by replacing '/Admin/Product/Upsert/id' with '/Admin/Product/Upsert/${data}' in each js script
 
 2055 Solved #3 by fixing typo in product.js. In the ajax call the category column had category.Name when it should have been category.name
+2103 Fully tested app, everything working as expected. Not happy with the look of it, buttons and inputs are too cramped, will edit css at a later date.
+2105 Part 4 Complete, pushing commits to github
