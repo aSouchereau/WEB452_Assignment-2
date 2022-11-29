@@ -182,3 +182,9 @@
 1827 Tested app, Same error as before, but now for category.Name. 
 1827 Another error: clicking edit link doesn't bring up edit page, manually entering an id into the url comes back as internal server error, caused by the edit and back to list button not being present
 1900 Moved button partials to shared folder so I dont have 3 copies of it
+1910 Tested app, can now manually access edit page,
+	List of current issues as of 1920:
+		1.	Ajax not loading category column (category.Name unkown parameter)
+		2.	Clicking edit button doesn't append the id to the url, resulting in showing the create form in the upsert view
+		3.  
+1930 Deleted all test items from database tables
