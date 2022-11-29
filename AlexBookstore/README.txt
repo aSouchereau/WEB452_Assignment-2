@@ -177,3 +177,8 @@
 
 1758 Solved error causing exception, GetAll method in product controller had a space in the include parameters and was reading it as " CoverType" instead of "CoverType"
 1800 Tested app, getting ajax errors. Requesting unknown parameters
+1818 Updated Product model to include the properties that the js script was trying to display
+1819 Created migration **********20221128231812_AddPricePropsToProduct.cs
+1827 Tested app, Same error as before, but now for category.Name. 
+1827 Another error: clicking edit link doesn't bring up edit page, manually entering an id into the url comes back as internal server error, caused by the edit and back to list button not being present
+1900 Moved button partials to shared folder so I dont have 3 copies of it
