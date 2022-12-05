@@ -194,3 +194,8 @@
 2055 Solved #3 by fixing typo in product.js. In the ajax call the category column had category.Name when it should have been category.name
 2103 Fully tested app, everything working as expected. Not happy with the look of it, buttons and inputs are too cramped, will edit css at a later date.
 2105 Part 4 Complete, pushing commits to github
+
+2022-12-05
+1043 Cleaned, built and ran app, checked to see which styles need to be edited
+1046 Added top and bottom margins to buttons
+1048 Removed placeholder link from dropdown
