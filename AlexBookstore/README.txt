@@ -199,3 +199,5 @@
 1043 Cleaned, built and ran app, checked to see which styles need to be edited
 1046 Added top and bottom margins to buttons
 1048 Removed placeholder link from dropdown
+1053 Changed table colours
+1054 Pushed commits to github
