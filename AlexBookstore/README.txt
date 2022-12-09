@@ -201,3 +201,8 @@
 1048 Removed placeholder link from dropdown
 1053 Changed table colours
 1054 Pushed commits to github
+
+2022-12-05
+1210 Added product table to home page, model not working
+
+2022-12-08

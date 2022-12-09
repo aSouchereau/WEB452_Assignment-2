@@ -1,5 +1,7 @@
 ﻿using AlexBookstore.Models;
 using AlexBookstore.Models.ViewModels;
+using AlexsBooks.DataAccess.Repository.IRepository;
+using AlexsBooks.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,15 +16,18 @@ namespace AlexBookstore.Areas.Customers.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> products = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(products);
         }
 
         public IActionResult Privacy()
